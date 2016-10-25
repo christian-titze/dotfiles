@@ -5,41 +5,41 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'chriskempson/base16-vim' " base16 colorscheme
 " Plug 'altercation/vim-colors-solarized' " Solarized colorscheme.
-Plug 'frankier/neovim-colors-solarized-truecolor-only' " Solarized colorscheme for Neovim.
+" Plug 'frankier/neovim-colors-solarized-truecolor-only' " Solarized colorscheme for Neovim.
 Plug 'vim-airline/vim-airline' " Lean & mean status/tabline that's light as air.
 Plug 'vim-airline/vim-airline-themes' " Collection of themes for vim-airline.
 Plug 'easymotion/vim-easymotion' " Vim motions on speed.
-"Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file, bufffer, mru, tag, etc finder.
-"Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " A file tree explorer.
+" Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file, bufffer, mru, tag, etc finder.
+" Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " A file tree explorer.
 Plug 'scrooloose/nerdcommenter' " Intensely orgasmic commenting.
 Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple.
-"Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with ".".
-"Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings.
-"Plug 'tpope/vim-speeddating' " Use CTRL-A/CTRL-X to increment dates, times, and more.
+" Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with ".".
+Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings.
+" Plug 'tpope/vim-speeddating' " Use CTRL-A/CTRL-X to increment dates, times, and more.
 Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces).
-"" Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
+" Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
 Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, parens, brackets, etc.
-"" Plug 'Shougo/neocomplete.vim' " Next generation completion framework.
-"" Plug 'ervandew/supertab' " All insert mode completions with Tab.
-"Plug 'Valloric/YouCompleteMe' " Code completion engine.
-"" Plug 'scrooloose/syntastic' " Synchronous syntax checking for vim.
-"Plug 'neomake/neomake' " Asynchronous syntax checking for neovim, replacement for syntastic.
-"" Plug 'majutsushi/tagbar' " Display tags in a window.
-"" Plug 'ludovicchabant/vim-gutentags' " Automatic tag management.
-"Plug 'airblade/vim-gitgutter' " Show git diff in the gutter.
-"" Plug 'godlygeek/tabular' " Script for text filtering and alignment.
-"Plug 'junegunn/vim-easy-align' " Alignment plugin.
-"Plug 'Yggdroot/indentLine' " Display the indention levels with thin vertical lines.
+" Plug 'Shougo/neocomplete.vim' " Next generation completion framework.
+" Plug 'ervandew/supertab' " All insert mode completions with Tab.
+" Plug 'Valloric/YouCompleteMe' " Code completion engine.
+" Plug 'scrooloose/syntastic' " Synchronous syntax checking for vim.
+" Plug 'neomake/neomake' " Asynchronous syntax checking for neovim, replacement for syntastic.
+" Plug 'majutsushi/tagbar' " Display tags in a window.
+" Plug 'ludovicchabant/vim-gutentags' " Automatic tag management.
+" Plug 'airblade/vim-gitgutter' " Show git diff in the gutter.
+" Plug 'godlygeek/tabular' " Script for text filtering and alignment.
+" Plug 'junegunn/vim-easy-align' " Alignment plugin.
+" Plug 'Yggdroot/indentLine' " Display the indention levels with thin vertical lines.
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace in red.
-"Plug 'sickill/vim-pasta' " Context-aware pasting.
+" Plug 'sickill/vim-pasta' " Context-aware pasting.
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits.
-"Plug 'tmux-plugins/vim-tmux-focus-events' "Make terminal vim and tmux work better together.
-"" Plug 'edkolev/tmuxline.vim' " Simple tmux statusline generator.
-"" Plug 'terryma/vim-multiple-cursors' " Sublime Text style multiple selections.
-"Plug 'junegunn/goyo.vim' " Distraction-free writing.
-"Plug 'justinmk/vim-syntax-extra' " Better syntax highlighting for C.
-Plug 'JamshedVesuna/vim-markdown-preview' " A light Vim plugin for previewing markdown files in a browser.
-"" Plug 'mileszs/ack.vim' " Plugin for the Perl module/CLI script 'ack'.
+" Plug 'tmux-plugins/vim-tmux-focus-events' "Make terminal vim and tmux work better together.
+" Plug 'edkolev/tmuxline.vim' " Simple tmux statusline generator.
+" Plug 'terryma/vim-multiple-cursors' " Sublime Text style multiple selections.
+" Plug 'junegunn/goyo.vim' " Distraction-free writing.
+" Plug 'justinmk/vim-syntax-extra' " Better syntax highlighting for C.
+" Plug 'JamshedVesuna/vim-markdown-preview' " A light Vim plugin for previewing markdown files in a browser.
+" Plug 'mileszs/ack.vim' " Plugin for the Perl module/CLI script 'ack'.
 
 call plug#end()
 
