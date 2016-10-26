@@ -103,7 +103,7 @@ set ttyfast " indicates a fast terminal connection to make redrawing smoother
 "  9 using the mouse
 " ----------------------------------------------------------------------------
 if has('mouse')
-    set mouse=a " enable mouse support
+  set mouse=a " enable mouse support
 endif
 
 " ----------------------------------------------------------------------------
@@ -124,8 +124,12 @@ set visualbell " use a visual bell instead of beeping
 " 12 selecting text
 " ----------------------------------------------------------------------------
 set selection=inclusive " makes multiple cursor plugin work in GVim/MacVim
-set clipboard=unnamed " oh my gosh why didn't I find out about this sooner? no more register selection pain in the ass :-)
-
+if has("clipboard")
+  set clipboard=unnamed " yank to system clipboard
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
 " ----------------------------------------------------------------------------
 " 13 editing text
 " ----------------------------------------------------------------------------
