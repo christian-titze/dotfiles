@@ -71,15 +71,15 @@ export DOTFILES=$HOME/.dotfiles
 export SAVEHIST=1000
 export HISTFILE=$HOME/.zsh_history
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # Needed for base16-shell's readlink -f.
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # Needed for base16-shell's readlink -f.
-# export PATH=/usr/local/bin:$PATH
-export PATH=/Library/TeX/texbin:$PATH
-#if [[ -d /usr/local/sbin ]]; then
-#    export PATH=/usr/local/sbin:$PATH
-#fi
+if [[ -d /usr/local/opt/coreutils/libexec ]]; then
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # Needed for base16-shell's readlink -f.
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # Needed for base16-shell's readlink -f.
+fi
+if [[ -d /Library/TeX/texbin ]]; then
+  export PATH=/Library/TeX/texbin:$PATH
+fi
 if [[ -d ~/bin ]]; then
-    export PATH=~/bin:$PATH
+  export PATH=~/bin:$PATH
 fi
 
 source $ZSH/oh-my-zsh.sh
