@@ -288,6 +288,11 @@ let g:NERDSpaceDelims = 1 " add spaces after comment delimiters by default
 let g:NERDCompactSexyComs = 1 " use compact syntax for prettified multi-line comments
 
 " ----------------------------------------------------------------------------
+" YouCompleteMe settings
+" ----------------------------------------------------------------------------
+let g:ycm_confirm_extra_conf = 0
+
+" ----------------------------------------------------------------------------
 " vim-multiple-cursors settings
 " ----------------------------------------------------------------------------
 " let g:multi_cursor_start_key='<C-M>' " map start key separately from next key
