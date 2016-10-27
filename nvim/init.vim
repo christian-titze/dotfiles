@@ -19,9 +19,8 @@ Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings.
 Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces).
 " Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
 Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, parens, brackets, etc.
-" Plug 'Shougo/neocomplete.vim' " Next generation completion framework.
 " Plug 'ervandew/supertab' " All insert mode completions with Tab.
-" Plug 'Valloric/YouCompleteMe' " Code completion engine.
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' } " Code completion engine.
 " Plug 'scrooloose/syntastic' " Synchronous syntax checking for vim.
 " Plug 'neomake/neomake' " Asynchronous syntax checking for neovim, replacement for syntastic.
 " Plug 'majutsushi/tagbar' " Display tags in a window.
@@ -29,7 +28,7 @@ Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, p
 " Plug 'airblade/vim-gitgutter' " Show git diff in the gutter.
 " Plug 'godlygeek/tabular' " Script for text filtering and alignment.
 " Plug 'junegunn/vim-easy-align' " Alignment plugin.
-" Plug 'Yggdroot/indentLine' " Display the indention levels with thin vertical lines.
+Plug 'Yggdroot/indentLine' " Display the indention levels with thin vertical lines.
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace in red.
 " Plug 'sickill/vim-pasta' " Context-aware pasting.
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits.
@@ -37,7 +36,7 @@ Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes a
 " Plug 'edkolev/tmuxline.vim' " Simple tmux statusline generator.
 " Plug 'terryma/vim-multiple-cursors' " Sublime Text style multiple selections.
 " Plug 'junegunn/goyo.vim' " Distraction-free writing.
-" Plug 'justinmk/vim-syntax-extra' " Better syntax highlighting for C.
+Plug 'justinmk/vim-syntax-extra' " Better syntax highlighting for C.
 " Plug 'JamshedVesuna/vim-markdown-preview' " A light Vim plugin for previewing markdown files in a browser.
 " Plug 'mileszs/ack.vim' " Plugin for the Perl module/CLI script 'ack'.
 
