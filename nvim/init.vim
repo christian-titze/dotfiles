@@ -30,7 +30,7 @@ Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, p
 " Plug 'junegunn/vim-easy-align' " Alignment plugin.
 Plug 'Yggdroot/indentLine' " Display the indention levels with thin vertical lines.
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace in red.
-" Plug 'sickill/vim-pasta' " Context-aware pasting.
+Plug 'sickill/vim-pasta' " Context-aware pasting.
 Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits.
 " Plug 'tmux-plugins/vim-tmux-focus-events' "Make terminal vim and tmux work better together.
 " Plug 'edkolev/tmuxline.vim' " Simple tmux statusline generator.
