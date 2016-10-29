@@ -38,7 +38,7 @@ Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes a
 " Plug 'junegunn/goyo.vim' " Distraction-free writing.
 Plug 'justinmk/vim-syntax-extra' " Better syntax highlighting for C.
 " Plug 'JamshedVesuna/vim-markdown-preview' " A light Vim plugin for previewing markdown files in a browser.
-" Plug 'mileszs/ack.vim' " Plugin for the Perl module/CLI script 'ack'.
+Plug 'mileszs/ack.vim' " Plugin for the Perl module/CLI script 'ack'.
 
 call plug#end()
 
@@ -334,15 +334,22 @@ let g:indentLine_char = '│'
 " ----------------------------------------------------------------------------
 " vim-markdown-preview settings
 " ----------------------------------------------------------------------------
-let vim_markdown_preview_hotkey='<C-m>' " map hotkey to Ctrl+M
+" let vim_markdown_preview_hotkey='<C-m>' " map hotkey to Ctrl+M
 let vim_markdown_preview_github=1 " use GitHub flavoured markdown
 let vim_markdown_preview_toggle=2 " display images automatically on buffer write
 
 " ----------------------------------------------------------------------------
-" vim-tmux-navigator
+" vim-tmux-navigator settings
 " ----------------------------------------------------------------------------
 " Workaround to make Ctrl+h work in NeoVim
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
+" ----------------------------------------------------------------------------
+" ack.vim settings
+" ----------------------------------------------------------------------------
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " ----------------------------------------------------------------------------
 " visual setup
