@@ -336,7 +336,7 @@ let g:indentLine_char = '│'
 " ----------------------------------------------------------------------------
 " let vim_markdown_preview_hotkey='<C-m>' " map hotkey to Ctrl+M
 let vim_markdown_preview_github=1 " use GitHub flavoured markdown
-let vim_markdown_preview_toggle=2 " display images automatically on buffer write
+" let vim_markdown_preview_toggle=2 " display images automatically on buffer write
 
 " ----------------------------------------------------------------------------
 " vim-tmux-navigator settings
