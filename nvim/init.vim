@@ -46,7 +46,7 @@ Plug 'valloric/matchtagalways', { 'for': ['html', 'xml'] } " Always highlight th
 Plug 'vim-scripts/matchit.zip' " Extended % matching for HTML, LaTeX, and many other languages.
 Plug 'docunext/closetag.vim', { 'for': ['html', 'xml'] } " Functions and mappings to close open HTML/XML tags.
 Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] } " Better JSON: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing.
-Plug 'ap/vim-css-color', { 'for': ['css', 'html', 'json', 'javascript'] } " Preview colours in source code while editing.
+Plug 'ap/vim-css-color', { 'for': 'css' } " Preview colours in source code while editing.
 
 call plug#end()
 
