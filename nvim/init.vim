@@ -41,12 +41,11 @@ Plug 'justinmk/vim-syntax-extra', { 'for': ['c', 'cpp'] } " Better syntax highli
 Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' } " A light Vim plugin for previewing markdown files in a browser.
 " Plug 'mileszs/ack.vim' " Plugin for the Perl module/CLI script 'ack'.
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'json'] } " Vastly improved Javascript indentation and syntax support.
-Plug 'othree/html5.vim', { 'for': 'html' } " HTML5 omnicomplete and syntax.
 Plug 'valloric/matchtagalways', { 'for': ['html', 'xml'] } " Always highlight the enclosing HTML/XML tags.
 Plug 'vim-scripts/matchit.zip' " Extended % matching for HTML, LaTeX, and many other languages.
-Plug 'docunext/closetag.vim', { 'for': ['html', 'xml'] } " Functions and mappings to close open HTML/XML tags.
+Plug 'alvan/vim-closetag', { 'for': ['html', 'xml'] } " Auto close (X)HTML tags.
 Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] } " Better JSON: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing.
-Plug 'ap/vim-css-color', { 'for': 'css' } " Preview colours in source code while editing.
+Plug 'ap/vim-css-color', { 'for': ['css', 'html', 'json', 'javascript', 'python'] } " Preview colours in source code while editing.
 
 call plug#end()
 
