@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'chriskempson/base16-vim' " base16 colorscheme
 " Plug 'altercation/vim-colors-solarized' " Solarized colorscheme.
-" Plug 'frankier/neovim-colors-solarized-truecolor-only' " Solarized colorscheme for Neovim.
+" Plug 'frankier/neovim-colors-solarized-truecolor-only' " Solarized colorscheme for neovim.
 Plug 'vim-airline/vim-airline' " Lean & mean status/tabline that's light as air.
 Plug 'vim-airline/vim-airline-themes' " Collection of themes for vim-airline.
 Plug 'easymotion/vim-easymotion' " Vim motions on speed.
@@ -16,15 +16,16 @@ Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple.
 " Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with ".".
 Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings.
 " Plug 'tpope/vim-speeddating' " Use CTRL-A/CTRL-X to increment dates, times, and more.
-Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces).
+" Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces).
 " Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
 Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, parens, brackets, etc.
 " Plug 'ervandew/supertab' " All insert mode completions with Tab.
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' } " Code completion engine.
+Plug 'Valloric/YouCompleteMe', { 'for': ['asm', 'nasm', 'masm', 'c', 'cpp', 'python', 'javascript', 'json', 'html'], 'do': './install.py --clang-completer' } " Code completion engine.
 " Plug 'scrooloose/syntastic' " Synchronous syntax checking for vim.
-Plug 'neomake/neomake' " Asynchronous syntax checking for neovim, replacement for syntastic.
-" Plug 'majutsushi/tagbar' " Display tags in a window.
-" Plug 'ludovicchabant/vim-gutentags' " Automatic tag management.
+Plug 'neomake/neomake', { 'for': ['asm', 'nasm', 'masm', 'c', 'cpp', 'python', 'javascript'] } " Asynchronous syntax checking for neovim, replacement for syntastic.
+" Plug 'xolox/vim-easytags', { 'for': ['c', 'cpp'] } " Automated tag file generation and syntax highlighting of tags.
+Plug 'ludovicchabant/vim-gutentags', { 'for': ['c', 'cpp'] } " Automatic tag management.
+Plug 'majutsushi/tagbar', { 'on': ['TagbarOpen', 'TagbarToggle'], 'for': ['c', 'cpp'] } " Display tags in a window, ordered by scope.
 " Plug 'airblade/vim-gitgutter' " Show git diff in the gutter.
 " Plug 'godlygeek/tabular' " Script for text filtering and alignment.
 " Plug 'junegunn/vim-easy-align' " Alignment plugin.
@@ -36,9 +37,16 @@ Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes a
 " Plug 'edkolev/tmuxline.vim' " Simple tmux statusline generator.
 " Plug 'terryma/vim-multiple-cursors' " Sublime Text style multiple selections.
 " Plug 'junegunn/goyo.vim' " Distraction-free writing.
-Plug 'justinmk/vim-syntax-extra' " Better syntax highlighting for C.
-Plug 'JamshedVesuna/vim-markdown-preview' " A light Vim plugin for previewing markdown files in a browser.
-Plug 'mileszs/ack.vim' " Plugin for the Perl module/CLI script 'ack'.
+Plug 'justinmk/vim-syntax-extra', { 'for': ['c', 'cpp'] } " Better syntax highlighting for C.
+Plug 'JamshedVesuna/vim-markdown-preview', { 'for': 'markdown' } " A light Vim plugin for previewing markdown files in a browser.
+" Plug 'mileszs/ack.vim' " Plugin for the Perl module/CLI script 'ack'.
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'json'] } " Vastly improved Javascript indentation and syntax support.
+Plug 'othree/html5.vim', { 'for': 'html' } " HTML5 omnicomplete and syntax.
+Plug 'valloric/matchtagalways', { 'for': ['html', 'xml'] } " Always highlight the enclosing HTML/XML tags.
+Plug 'vim-scripts/matchit.zip' " Extended % matching for HTML, LaTeX, and many other languages.
+Plug 'docunext/closetag.vim', { 'for': ['html', 'xml'] } " Functions and mappings to close open HTML/XML tags.
+Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] } " Better JSON: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing.
+Plug 'ap/vim-css-color', { 'for': ['css', 'html', 'json', 'javascript'] } " Preview colours in source code while editing.
 
 call plug#end()
 
@@ -219,18 +227,30 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
 
 " Do not strip trailing spaces in plain text files.
-autocmd FileType text,markdown,pandoc let b:noStripWhitespace=1
+autocmd FileType text,markdown let b:noStripWhitespace=1
 
 " Set indentation to 2 spaces when editing TeX files.
 autocmd FileType plaintex,tex,latex setlocal ts=2 sw=2 sts=2 expandtab
 autocmd BufEnter *.tex setlocal ts=2 sw=2 sts=2 expandtab
+
+" Set indentation to 2 spaces when editing JavaScript files.
+autocmd FileType javascript setlocal ts=2 sw=2 sts=2 expandtab
+autocmd BufEnter *.js setlocal ts=2 sw=2 sts=2 expandtab
+
+" Set indentation to 2 spaces when editing HTML files.
+autocmd FileType html setlocal ts=2 sw=2 sts=2 expandtab
+autocmd BufEnter *.html setlocal ts=2 sw=2 sts=2 expandtab
+
+" Set indentation to 2 spaces when editing CSS files.
+autocmd FileType css setlocal ts=2 sw=2 sts=2 expandtab
+autocmd BufEnter *.css setlocal ts=2 sw=2 sts=2 expandtab
 
 " Set indentation to 4 spaces when editing Python files.
 autocmd FileType python setlocal ts=4 sw=4 sts=4 expandtab
 autocmd BufEnter *.py setlocal ts=4 sw=4 sts=4 expandtab
 
 " Set indentation to 4 spaces when editing Markdown files.
-autocmd FileType markdown,pandoc setlocal ts=4 sw=4 sts=4 expandtab
+autocmd FileType markdown setlocal ts=4 sw=4 sts=4 expandtab
 autocmd BufEnter *.md setlocal ts=4 sw=4 sts=4 expandtab
 
 " Type w!! if you forgot to sudo.
@@ -262,6 +282,8 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 let g:airline_theme = 'base16'
 let g:airline_powerline_fonts = 1 " Attention: Requires powerline fonts!
 let g:airline#extensions#tabline#enabled = 1 " show buffers at the top if only one tab is open
+let g:airline#extensions#tagbar#enabled = 0 " disable tagbar extension because of conditional loading of plugin
+let g:airline#extensions#wordcount#enabled = 1
 " let g:airline_left_sep=''
 " let g:airline_right_sep=''
 " let g:airline#extensions#tabline#left_sep = ''
@@ -278,8 +300,8 @@ let g:EasyMotion_smartcase = 1 " smartcase mode
 " ----------------------------------------------------------------------------
 " NERDTree settings
 " ----------------------------------------------------------------------------
-map <C-n> :NERDTreeToggle<CR> " open NERDTree with Ctrl + n
-let NERDTreeShowHidden=1 " show hidden files
+" map <C-n> :NERDTreeToggle<CR> " open NERDTree with Ctrl + n
+" let NERDTreeShowHidden=1 " show hidden files
 
 " ----------------------------------------------------------------------------
 " NERDCommenter settings
@@ -290,7 +312,7 @@ let g:NERDCompactSexyComs = 1 " use compact syntax for prettified multi-line com
 " ----------------------------------------------------------------------------
 " YouCompleteMe settings
 " ----------------------------------------------------------------------------
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_confirm_extra_conf = 0 " load .ycm_extra_conf.py without confirmation
 
 " ----------------------------------------------------------------------------
 " vim-multiple-cursors settings
@@ -334,7 +356,7 @@ let g:indentLine_char = '│'
 " ----------------------------------------------------------------------------
 " vim-markdown-preview settings
 " ----------------------------------------------------------------------------
-" let vim_markdown_preview_hotkey='<C-m>' " map hotkey to Ctrl+M
+let vim_markdown_preview_hotkey='<C-m>' " map hotkey to Ctrl + m
 let vim_markdown_preview_github=1 " use GitHub flavoured markdown
 " let vim_markdown_preview_toggle=2 " display images automatically on buffer write
 
