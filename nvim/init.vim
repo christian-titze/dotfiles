@@ -13,10 +13,10 @@ Plug 'easymotion/vim-easymotion' " Vim motions on speed.
 " Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " A file tree explorer.
 Plug 'scrooloose/nerdcommenter' " Intensely orgasmic commenting.
 Plug 'tpope/vim-surround' " Quoting/parenthesizing made simple.
-" Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with ".".
+Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with ".".
 Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings.
 " Plug 'tpope/vim-speeddating' " Use CTRL-A/CTRL-X to increment dates, times, and more.
-" Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces).
+Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces).
 " Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
 Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, parens, brackets, etc.
 " Plug 'ervandew/supertab' " All insert mode completions with Tab.
