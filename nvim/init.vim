@@ -305,13 +305,14 @@ let g:EasyMotion_smartcase = 1 " smartcase mode
 " ----------------------------------------------------------------------------
 " NERDCommenter settings
 " ----------------------------------------------------------------------------
-let g:NERDSpaceDelims = 1 " add spaces after comment delimiters by default
-let g:NERDCompactSexyComs = 1 " use compact syntax for prettified multi-line comments
+" let g:NERDSpaceDelims = 1 " add spaces after comment delimiters by default
+" let g:NERDCompactSexyComs = 1 " use compact syntax for prettified multi-line comments
 
 " ----------------------------------------------------------------------------
 " YouCompleteMe settings
 " ----------------------------------------------------------------------------
 let g:ycm_confirm_extra_conf = 0 " load .ycm_extra_conf.py without confirmation
+let g:ycm_autoclose_preview_window_after_completion = 1 " auto-close the 'preview' window after the user accepts the offered completion string
 
 " ----------------------------------------------------------------------------
 " vim-multiple-cursors settings
