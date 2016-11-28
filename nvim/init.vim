@@ -17,8 +17,8 @@ Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with ".".
 Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings.
 " Plug 'tpope/vim-speeddating' " Use CTRL-A/CTRL-X to increment dates, times, and more.
 Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces).
-" Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
-Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, parens, brackets, etc.
+ Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
+" Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, parens, brackets, etc.
 " Plug 'ervandew/supertab' " All insert mode completions with Tab.
 Plug 'Valloric/YouCompleteMe', { 'for': ['asm', 'nasm', 'masm', 'c', 'cpp', 'python', 'javascript', 'json', 'html'], 'do': './install.py --clang-completer' } " Code completion engine.
 " Plug 'scrooloose/syntastic' " Synchronous syntax checking for vim.
@@ -305,7 +305,7 @@ let g:EasyMotion_smartcase = 1 " smartcase mode
 " ----------------------------------------------------------------------------
 " NERDCommenter settings
 " ----------------------------------------------------------------------------
-" let g:NERDSpaceDelims = 1 " add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1 " add spaces after comment delimiters by default
 " let g:NERDCompactSexyComs = 1 " use compact syntax for prettified multi-line comments
 
 " ----------------------------------------------------------------------------
