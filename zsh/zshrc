@@ -117,7 +117,7 @@ alias vim="nvim"
 #alias tmux="env TERM=xterm-256color tmux"
 alias reload="source ~/.zshrc"
 alias rmds='find . -name ".DS_Store" -type f -print0 | xargs -0 rm'
-alias ip='wget -qO- "http://ip-api.com/line/?fields=country,query"' # Convenient external IP and geolocation retrieval command.
+alias ip='{ read country; read city; read ip; } <<< $(wget -qO- "http://ip-api.com/line/?fields=country,city,query"); echo -e "$ip\n$city, $country"' # Convenient external IP and geolocation retrieval command.
 
 # base16-shell helper
 BASE16_SHELL=$HOME/.config/base16-shell/
