@@ -81,6 +81,9 @@ fi
 if [[ -d /Library/TeX/texbin ]]; then
   export PATH=/Library/TeX/texbin:$PATH
 fi
+if [[ -d /usr/local/bin ]]; then
+  export PATH=/usr/local/bin:$PATH
+fi
 if [[ -d ~/bin ]]; then
   export PATH=~/bin:$PATH
 fi
