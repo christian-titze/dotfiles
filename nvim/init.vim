@@ -17,7 +17,7 @@ Plug 'tpope/vim-repeat' " Enable repeating supported plugin maps with ".".
 Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings.
 " Plug 'tpope/vim-speeddating' " Use CTRL-A/CTRL-X to increment dates, times, and more.
 Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces).
- Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
+Plug 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes in pair.
 " Plug 'Raimondi/delimitMate' " Provides insert mode auto-completion for quotes, parens, brackets, etc.
 " Plug 'ervandew/supertab' " All insert mode completions with Tab.
 Plug 'Valloric/YouCompleteMe', { 'for': ['asm', 'nasm', 'masm', 'c', 'cpp', 'python', 'javascript', 'json', 'html'], 'do': './install.py --clang-completer' } " Code completion engine.
@@ -26,7 +26,7 @@ Plug 'neomake/neomake', { 'for': ['asm', 'nasm', 'masm', 'c', 'cpp', 'python', '
 " Plug 'xolox/vim-easytags', { 'for': ['c', 'cpp'] } " Automated tag file generation and syntax highlighting of tags.
 Plug 'ludovicchabant/vim-gutentags', { 'for': ['c', 'cpp'] } " Automatic tag management.
 Plug 'majutsushi/tagbar', { 'on': ['TagbarOpen', 'TagbarToggle'], 'for': ['c', 'cpp'] } " Display tags in a window, ordered by scope.
-" Plug 'airblade/vim-gitgutter' " Show git diff in the gutter.
+Plug 'airblade/vim-gitgutter' " Show git diff in the gutter.
 " Plug 'godlygeek/tabular' " Script for text filtering and alignment.
 " Plug 'junegunn/vim-easy-align' " Alignment plugin.
 Plug 'Yggdroot/indentLine' " Display the indention levels with thin vertical lines.
