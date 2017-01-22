@@ -228,30 +228,6 @@ autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
 " Do not strip trailing spaces in plain text files.
 autocmd FileType text,markdown let b:noStripWhitespace=1
 
-" Set indentation to 2 spaces when editing TeX files.
-autocmd FileType plaintex,tex,latex setlocal ts=2 sw=2 sts=2 expandtab
-autocmd BufEnter *.tex setlocal ts=2 sw=2 sts=2 expandtab
-
-" Set indentation to 2 spaces when editing JavaScript files.
-autocmd FileType javascript setlocal ts=2 sw=2 sts=2 expandtab
-autocmd BufEnter *.js setlocal ts=2 sw=2 sts=2 expandtab
-
-" Set indentation to 2 spaces when editing HTML files.
-autocmd FileType html setlocal ts=2 sw=2 sts=2 expandtab
-autocmd BufEnter *.html setlocal ts=2 sw=2 sts=2 expandtab
-
-" Set indentation to 2 spaces when editing CSS files.
-autocmd FileType css setlocal ts=2 sw=2 sts=2 expandtab
-autocmd BufEnter *.css setlocal ts=2 sw=2 sts=2 expandtab
-
-" Set indentation to 4 spaces when editing Python files.
-autocmd FileType python setlocal ts=4 sw=4 sts=4 expandtab
-autocmd BufEnter *.py setlocal ts=4 sw=4 sts=4 expandtab
-
-" Set indentation to 4 spaces when editing Markdown files.
-autocmd FileType markdown setlocal ts=4 sw=4 sts=4 expandtab
-autocmd BufEnter *.md setlocal ts=4 sw=4 sts=4 expandtab
-
 " Type w!! if you forgot to sudo.
 cmap w!! w !sudo tee % >/dev/null
 
